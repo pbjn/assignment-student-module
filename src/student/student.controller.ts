@@ -29,4 +29,10 @@ export class StudentController {
         return this.studentService.updateStudent(id, updateData);
     }
 
+    @Delete(':id')
+        deleteStudent(@Param('id') id: number): Promise<string> {
+        return this.studentService.deleteStudent(id);
+    }
+
+
 }
